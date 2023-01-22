@@ -1,2 +1,3 @@
-# EN-GEN merupakan aplikasi penghitung warna tube dan core dari kabel fiber optik dari 144 core.
-aplikasi ini dibuat hanya untuk pembelajaran saja.
+# EN-GEN APLIKASI PENCARI CORE DAN WARNA CORE TUBE DARI 144 CORE KABEL FIBER OPTIC
+Cara Pemakaian :
+
