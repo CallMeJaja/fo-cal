@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import os,time
+
 input('kamu masih jomblo? [y/n] : ')
 time.sleep(0.5)
 os.system('cls||clear')
@@ -85,7 +89,19 @@ def Core():
         elif menu == 0:
             show_menu()
         else:
-            print('')
+            time.sleep(0.5)
+            print('\n{} TIDAK ADA DI MENU. PILIH MENU 1 SAMPAI 4'.format(menu))
+            menu = int(input('\nPILIH MENU [0. BACK TO MENU] => '))
+            if menu == 1:
+                Core()
+            elif menu == 2:
+                Color()
+            elif menu == 3:
+                About()
+            elif menu == 4:
+                exit()
+            elif menu == 0:
+                show_menu()
 def Color():
     print('\n===== ALAT MENCARI CORE DARI WARNA =====')
     colorTube = input('masukan warna tube nya : ')
@@ -163,7 +179,19 @@ def Color():
         elif menu == 0:
             show_menu()
         else:
-            print('')
+            time.sleep(0.5)
+            print('\n{} TIDAK ADA DI MENU. PILIH MENU 1 SAMPAI 4'.format(menu))
+            menu = int(input('\nPILIH MENU [0. BACK TO MENU] => '))
+            if menu == 1:
+                Core()
+            elif menu == 2:
+                Color()
+            elif menu == 3:
+                About()
+            elif menu == 4:
+                exit()
+            elif menu == 0:
+                show_menu()
 def About():
     time.sleep(0.5)
     print("""
@@ -198,7 +226,7 @@ def About():
 =============================[ Terimakasih telah menggunakan aplikasi ini :) ]=============================      
 ===========================================================================================================    
         """)
-        time.sleep(1)
+        time.sleep(0.5)
         exit()
     elif menu == 0:
         show_menu()
