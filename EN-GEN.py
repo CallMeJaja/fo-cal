@@ -6,102 +6,115 @@ import os,time
 input('kamu masih jomblo? [y/n] : ')
 time.sleep(0.5)
 os.system('cls||clear')
+global menu 
+menu = 0
 
 def Core(): 
-    core = int(input('\nInput Core Number => '))
-    DiV = core / 12
-    MoD = core % 12
-    bulatAtas = round(DiV + 0.5)
-    def findTube() :
-        if bulatAtas == 1 or bulatAtas == 0:
-            print('Biru')
-        elif bulatAtas == 2:
-            print('Orange')
-        elif bulatAtas == 3:
-            print('Hijau') 
-        elif bulatAtas == 4:
-            print('Cokelat')
-        elif bulatAtas == 5:
-            print('Abu-Abu')
-        elif bulatAtas == 6:
-            print('Putih')
-        elif bulatAtas == 7:
-            print('Merah')
-        elif bulatAtas == 8:
-            print('Hitam')
-        elif bulatAtas == 9:
-            print('Kuning')
-        elif bulatAtas == 10:
-            print('Violet')
-        elif bulatAtas == 11:
-            print('Pink')
-        elif bulatAtas == 0 or bulatAtas == 12 or bulatAtas == 13:
-            print('Toska')
-        return bulatAtas
-    def findCore() :
-        if MoD == 1:
-            print('Biru')
-        elif MoD == 2:
-            print('Orange')
-        elif MoD == 3:
-            print('Hijau') 
-        elif MoD == 4:
-            print('Cokelat')
-        elif MoD == 5:
-            print('Abu-Abu')
-        elif MoD == 6:
-            print('Putih')
-        elif MoD == 7:
-            print('Merah')
-        elif MoD == 8:
-            print('Hitam')
-        elif MoD == 9:
-            print('Kuning')
-        elif MoD == 10:
-            print('Violet')
-        elif MoD == 11:
-            print('Pink')
-        elif MoD == 0 or MoD == 12:
-            print('Toska')
-        return MoD
-    time.sleep(0.2)
-    print('\n===== RESULT COLOR =====')
-    print('Warna Tube dan Warna Core dari Core Ke-{} adalah \n'.format(core))
-    print('Warna Tube :')
-    findTube()
-    print('Warna Core :')
-    findCore()
-    print('===========================')
-    q = input('Ingin mencoba lagi ? (yes/no) => ')
-    if q == "yes":
-        Core()
-    elif q == 'no':
-        time.sleep(0.5)
-        menu = int(input('\nPILIH MENU [0. MENU] => '))
-        if menu == 1:
-            Core()
-        elif menu == 2:
-            Color()
-        elif menu == 3:
-            About()
-        elif menu == 4:
-            exit()
-        elif menu == 0:
-            show_menu()
+    core = 0
+    while True:
+        try:
+            core = int(input('\nInput Core Number => '))
+            DiV = core / 12
+            MoD = core % 12
+            bulatAtas = round(DiV + 0.5)
+            def findTube() :
+                if bulatAtas == 1 or bulatAtas == 0:
+                    print('Biru')
+                elif bulatAtas == 2:
+                    print('Orange')
+                elif bulatAtas == 3:
+                    print('Hijau') 
+                elif bulatAtas == 4:
+                    print('Cokelat')
+                elif bulatAtas == 5:
+                    print('Abu-Abu')
+                elif bulatAtas == 6:
+                    print('Putih')
+                elif bulatAtas == 7:
+                    print('Merah')
+                elif bulatAtas == 8:
+                    print('Hitam')
+                elif bulatAtas == 9:
+                    print('Kuning')
+                elif bulatAtas == 10:
+                    print('Violet')
+                elif bulatAtas == 11:
+                    print('Pink')
+                elif bulatAtas == 0 or bulatAtas == 12 or bulatAtas == 13:
+                    print('Toska')
+                return bulatAtas
+            def findCore() :
+                if MoD == 1:
+                    print('Biru')
+                elif MoD == 2:
+                    print('Orange')
+                elif MoD == 3:
+                    print('Hijau') 
+                elif MoD == 4:
+                    print('Cokelat')
+                elif MoD == 5:
+                    print('Abu-Abu')
+                elif MoD == 6:
+                    print('Putih')
+                elif MoD == 7:
+                    print('Merah')
+                elif MoD == 8:
+                    print('Hitam')
+                elif MoD == 9:
+                    print('Kuning')
+                elif MoD == 10:
+                    print('Violet')
+                elif MoD == 11:
+                    print('Pink')
+                elif MoD == 0 or MoD == 12:
+                    print('Toska')
+                return MoD
+        except ValueError:
+            print('Input tidak valid. Gunakan angka')
+            continue
         else:
-            time.sleep(0.5)
-            print('\n{} TIDAK ADA DI MENU. PILIH MENU 1 SAMPAI 4'.format(menu))
-            menu = int(input('\nPILIH MENU [0. BACK TO MENU] => '))
-            if menu == 1:
+            time.sleep(0.2)
+            print('\n===== RESULT COLOR =====')
+            print('Warna Tube dan Warna Core dari Core Ke-{} adalah \n'.format(core))
+            print('Warna Tube :')
+            findTube()
+            print('Warna Core :')
+            findCore()
+            print('===========================')
+            q = input('Ingin mencoba lagi ? (yes/no) => ')
+            if q == "yes":
                 Core()
-            elif menu == 2:
+            elif q == "no":
+                return Menu()
+            break
+        
+def Menu():
+    menu = 0
+    while True:
+        try:
+            time.sleep(0.5)
+            menu = int(input('\nPILIH MENU [0. BACK TO MENU] => '))
+            if menu == 1 :
+                Core()
+            elif menu == 2 :
                 Color()
-            elif menu == 3:
+            elif menu == 3 :
                 About()
-            elif menu == 4:
+            elif menu == 4 :
                 exit()
-            elif menu == 0:
+            elif menu == 0 :
                 show_menu()
+            else:
+                print('\n{} TIDAK ADA DI MENU. PILIH MENU 1 SAMPAI 4'.format(menu))
+                return Menu()
+        except ValueError:
+            print('Pilihan anda tidak valid. Gunakan angka')
+            print('Pilih menu antara 1 sampai 4')
+            continue
+        else:
+            print('\n{} TIDAK ADA DI MENU. PILIH MENU 1 SAMPAI 4'.format(menu))
+            print('Pilih menu antara 1 sampai 4')
+            return Menu()
 def Color():
     print('\n===== ALAT MENCARI CORE DARI WARNA =====')
     colorTube = input('masukan warna tube nya : ')
@@ -166,32 +179,7 @@ def Color():
     if q == 'yes':
         Color()
     elif q == 'no':
-        time.sleep(0.5)
-        menu = int(input('\nPILIH MENU [0. BACK TO MENU] => '))
-        if menu == 1:
-            Core()
-        elif menu == 2:
-            Color()
-        elif menu == 3:
-            About()
-        elif menu == 4:
-            exit()
-        elif menu == 0:
-            show_menu()
-        else:
-            time.sleep(0.5)
-            print('\n{} TIDAK ADA DI MENU. PILIH MENU 1 SAMPAI 4'.format(menu))
-            menu = int(input('\nPILIH MENU [0. BACK TO MENU] => '))
-            if menu == 1:
-                Core()
-            elif menu == 2:
-                Color()
-            elif menu == 3:
-                About()
-            elif menu == 4:
-                exit()
-            elif menu == 0:
-                show_menu()
+        return Menu()
 def About():
     time.sleep(0.5)
     print("""
@@ -231,19 +219,9 @@ def About():
     elif menu == 0:
         show_menu()
     else:
-        time.sleep(0.5)
         print('\n{} TIDAK ADA DI MENU. PILIH MENU 1 SAMPAI 4'.format(menu))
-        menu = int(input('\nPILIH MENU [9. BACK TO MENU] => '))
-        if menu == 1:
-            Core()
-        elif menu == 2:
-            Color()
-        elif menu == 3:
-            About()
-        elif menu == 4:
-           exit()
-        elif menu == 0:
-            show_menu()
+        return Menu()
+
 def show_menu():
     print(("""
 ====================================[ APILKASI FIBER OPTIC ]====================================
@@ -265,34 +243,32 @@ def show_menu():
     print('[ 2 ] FIND BY COLOR')
     print('[ 3 ] ABOUT TOOLS')
     print('[ 4 ] EXIT')
-    menu = int(input('\nPILIH MENU => '))
-    if menu == 1:
-        Core()
-    elif menu == 2:
-        Color()
-    elif menu == 3:
-        About()
-    elif menu == 4:
-        time.sleep(0.5)
-        print("""
-===========================================================================================================      
-=============================[ Terimakasih telah menggunakan aplikasi ini :) ]=============================      
-===========================================================================================================    
-        """)
-        time.sleep(1)
-        exit()
-    else:
-        time.sleep(0.5)
-        print('\n{} TIDAK ADA DI MENU. PILIH MENU 1 SAMPAI 4'.format(menu))
-        menu = int(input('\nPILIH MENU => '))
-        if menu == 1:
-            Core()
-        elif menu == 2:
-            Color()
-        elif menu == 3:
-            About()
-        elif menu == 4:
-           exit()
+    menu = 0
+    while True:
+        try:
+            menu = int(input('\nPILIH MENU => '))
+            if menu == 1:
+                Core()
+            elif menu == 2:
+                Color()
+            elif menu == 3:
+                About()
+            elif menu == 4:
+                time.sleep(0.5)
+                print("""
+        ===========================================================================================================      
+        =============================[ Terimakasih telah menggunakan aplikasi ini :) ]=============================      
+        ===========================================================================================================    
+                """)
+                time.sleep(1)
+                exit()
+        except ValueError:
+            print('Pilihan anda tidak valid. Gunakan angka')
+            print('Pilihan anda tidak valid. Pilih menu antara 1 sampai 4')
+            continue
+        else:
+            print('{} TIDAK ADA DI MENU. PILIH MENU ANTARA 1 SAMPAI 4'.format(menu))
+            print('Pilihan anda tidak valid. Pilih menu antara 1 sampai 4')
 if __name__ == "__main__":
     while(True):
         show_menu()
