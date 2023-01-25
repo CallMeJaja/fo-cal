@@ -81,12 +81,15 @@ def Core():
             print('Warna Core :')
             findCore()
             print('===========================')
-            q = input('Ingin mencoba lagi ? (yes/no) => ')
-            if q == "yes":
-                Core()
-            elif q == "no":
-                return Menu()
+           
+         
+        q = input('Ingin mencoba lagi ? (yes/no) => ')
+        if q == "yes":
+            Core()
+        elif q == "no":
+            return Menu()
             break
+            
         
 def Menu():
     menu = 0
@@ -200,7 +203,7 @@ def About():
 ===========================================================================================================
 """)
     time.sleep(0.5)
-    menu = int(input('PILIH MENU [0. MENU] => '))
+    menu = int(input('PILIH MENU [0. BACK TO MENU] => '))
     if menu == 1:
         Core()
     elif menu == 2:
