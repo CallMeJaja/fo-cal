@@ -86,7 +86,7 @@ def Core():
         q = input('Ingin mencoba lagi ? (yes/no) => ')
         if q == "yes":
             Core()
-        elif q == "no":
+        else q == "no":
             return Menu()
             break
             
