@@ -171,7 +171,7 @@ def Color():
         elif colorCore == 'violet':
             core = 10 + tube()
         elif colorCore == 'pink':
-            core = 11 + tube()
+            core = 11 + Tube()
         elif colorCore == 'toska':
             core = 12 + tube()
         return core
