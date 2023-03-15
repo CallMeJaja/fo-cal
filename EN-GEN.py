@@ -151,7 +151,7 @@ def Color():
         return tube
     def Core():
         if colorCore == 'biru':
-            core = 1 + tube()
+            core = 1 + Tube()
         elif colorCore == 'oren':
             core = 2 + tube()
         elif colorCore == 'hijau':
