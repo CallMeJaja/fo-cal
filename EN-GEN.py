@@ -14,8 +14,8 @@ def Core():
     while True:
         try:
             core = int(input('\nInput Core Number => '))
-            DiV = core / 12
-            MoD = core % 12
+            DiV = core / 8
+            MoD = core % 8
             bulatAtas = round(DiV + 0.5)
             def findTube() :
                 if bulatAtas == 1 or bulatAtas == 0:
