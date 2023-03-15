@@ -122,7 +122,7 @@ def Color():
     print('\n===== ALAT MENCARI CORE DARI WARNA =====')
     colorTube = input('masukan warna tube nya : ')
     colorCore = input('masukan warna core nya : ')
-    def Tube():
+    def tube():
         global tube
         if colorTube == 'biru':
             tube = (1-1)*12
