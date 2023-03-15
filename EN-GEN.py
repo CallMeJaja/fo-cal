@@ -149,9 +149,9 @@ def Color():
         elif colorTube == 'toska':
             tube = (12-1)*12
         return tube
-    def Core():
+    def core():
         if colorCore == 'biru':
-            core = 1 + Tube()
+            core = 1 + tube()
         elif colorCore == 'oren':
             core = 2 + tube()
         elif colorCore == 'hijau':
@@ -171,7 +171,7 @@ def Color():
         elif colorCore == 'violet':
             core = 10 + tube()
         elif colorCore == 'pink':
-            core = 11 + Tube()
+            core = 11 + tube()
         elif colorCore == 'toska':
             core = 12 + tube()
         return core
