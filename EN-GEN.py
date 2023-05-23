@@ -194,7 +194,7 @@ def About():
                                     Python Ver : 3.x
                                     OS         : Windows
                                     Author     : Reza Asriano Maulana
-                                    Instagram  : rezaasriano18
+                                    Instagram  : rzaezaae
                                     Github     : CallMeJaja
 
 ===========================================================================================================
