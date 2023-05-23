@@ -177,7 +177,7 @@ def Color():
         return core
     time.sleep(0.5)
     print('\n===== RESULT TOOLS =====')
-    print('Core Ke => ',Core())
+    print('Core Ke => ',core())
     q = input('\nIngin Mencoba lagi ? (yes/no) => ')
     if q == 'yes':
         Color()
